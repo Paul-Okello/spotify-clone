@@ -14,7 +14,14 @@ function Footer() {
     return (
         <div className="footer">
            <div className="footer__left">
-               <h1>Album and song details</h1>
+               <img src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"
+                 alt=""
+                 className='footer__albumLogo'
+                />
+               <div className="footer__songInfo">
+                   <h4>yeah</h4>
+                   <p>usher</p>
+               </div>
            </div>
            <div className="footer__center">
                <ShuffleIcon  className='footer__green'/>
