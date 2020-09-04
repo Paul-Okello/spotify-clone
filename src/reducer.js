@@ -3,8 +3,8 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
-    //Remove after finishing dev
-     token: '',
+    discover_weekly: null,
+    token: null,
 }
 const reducer = (state, action) => {
     console.log(action); //debugging tool

@@ -34,15 +34,15 @@ function App() {
           playlists: playlists,
         })
       })
-      spotify.getPlaylist().then((discover_weekly) => {
+      spotify.getPlaylist('4pUiCvwFuIaWvDlckvduAC').then((response) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: discover_weekly,
+          discover_weekly: response,
         })
       })
     }
     
-  },[]);
+  },[token, dispatch]);
   console.log("TOKEN 👽: ", token);
   console.log("User 👨 ", user);
   return (
