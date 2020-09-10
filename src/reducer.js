@@ -5,6 +5,7 @@ export const initialState = {
     item: null,
     discover_weekly: null,
     token: null,
+    top_artists: null,
 }
 const reducer = (state, action) => {
     console.log(action); //debugging tool
@@ -30,6 +31,16 @@ const reducer = (state, action) => {
                 ...state,
                 discover_weekly: action.discover_weekly,
             }
+        case 'SET_TOP_ARTISTS':
+            return {
+                ...state,
+                top_artists: action.top_artists,
+            }   
+        case 'SET_ITEM':
+            return {
+                ...state,
+                item: action.item,
+            } 
         default:
             return state;
     }

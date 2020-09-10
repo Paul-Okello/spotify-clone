@@ -40,6 +40,12 @@ function App() {
           discover_weekly: response,
         })
       })
+      spotify.getMyTopArtists().then((response) =>{
+        dispatch({
+          type: 'SET_TOP_ARTISTS',
+          top_artists: response
+        })
+      })
     }
     
   },[token, dispatch]);
@@ -47,14 +53,8 @@ function App() {
   console.log("User 👨 ", user);
   return (
     <div className="app">
-      {
-        token ? (
-          <Player spotify={spotify} />
-        ):(
-          <Login />
-        )
-      }
-     
+      {!token && <Login />}
+      {token && <Player spotify={spotify} />}
     </div>
   );
 }
